@@ -10,7 +10,6 @@ let plats = [
         { name: 'Croque Monsieur Saumon Boursin', preparation: '15', ingredients: ['19', '6', '16'], prixPreparation: '2' },
         { name: 'Pates Carbonara', preparation: '15', ingredients: ['0', '3', '4', '5', '22'], prixPreparation: '6' },
         { name: 'Pates Bolognaises', preparation: '25', ingredients: ['0', '1', '2', '22'], prixPreparation: '8' },
-
     ],
     // desserts
     [
@@ -72,10 +71,8 @@ let Add_deux_plats = function (type, numero) {
         h5.setAttribute('class', 'plats');
 
         // calcul le prix total du produit
-        prix_total = Number(plats[type][i].prixPreparation);
-        for (let s = 0; s < plats[type][i].ingredients.length; ++s){
-            prix_total += Number(ingredients[plats[type][i].ingredients[s]].prix);
-        }
+        prix_total = Prix_total_plat(type, i);
+
         textname = document.createTextNode(plats[type][i].name + " : " + prix_total + "€");
         h5.appendChild(textname);
 
@@ -136,3 +133,13 @@ let Add_image = function (image) {
             return 0;
     }
 };
+
+let Prix_total_plat = function (type, i){
+    let prix_total;
+    prix_total = Number(plats[type][i].prixPreparation);
+
+    for (let s = 0; s < plats[type][i].ingredients.length; ++s){
+        prix_total += Number(ingredients[plats[type][i].ingredients[s]].prix);
+    }
+    return prix_total;
+}

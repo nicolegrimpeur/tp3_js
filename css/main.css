@@ -65,6 +65,9 @@ nav.black ul {
       background: black;
 }
 
+nav.black {
+    z-index :1000;
+}
 
 nav ul li {
       display: inline-block;
@@ -89,6 +92,7 @@ nav ul li a {
       color: #fff;
       display: none;
 }
+
 @media(max-width: 786px) {
 
       .logo {
