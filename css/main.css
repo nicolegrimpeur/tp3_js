@@ -1,0 +1,229 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+header {
+      width: 100%;
+      height: 100vh;
+      background: url(https://cdn-s-www.ledauphine.com/images/A836824B-CB88-4A6E-A323-18ADF8F02F3B/NW_raw/les-cuisiniers-se-lancent-dans-des-declinaisons-haut-de-gamme-du-burger-traditionnel-photo-d-illustration-pixabay-domaine-public-1521554712.jpg) no-repeat 50% 50%;
+      background-size: 2000px ;
+}
+body {
+    color: black;/* couleur de la page principal */
+    /* Margin bottom by footer height*/
+    margin: 0 0 40px 0;
+}
+ /* css du haut */*
+
+.content {
+      width: 94%;
+      margin: 4em auto;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+}
+
+@media (any-hover: hover) {
+  a:hover {
+   color: white ;
+  }
+}
+
+.logo {
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 16px 46px;
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      letter-spacing: 2px;
+}
+
+nav {
+      position: fixed;
+      width: 100%;
+      line-height: 60px;
+}
+
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+}
+/*barre du menu */
+nav.black ul {
+      background: black;
+}
+
+
+nav ul li {
+      display: inline-block;
+      padding: 16px 40px;
+}
+
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+}
+
+.menu-icon {
+      line-height: 60px;
+      width: 100%;
+      background: black;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+@media(max-width: 786px) {
+
+      .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 16px;
+      }
+
+      nav ul {
+            max-height: 0px;
+            background: black;
+      }
+
+      nav.black ul {
+            background: black ;
+      }
+
+      .showing {
+            max-height: 34em;
+      }
+
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+      }
+
+      .menu-icon {
+            display: block;
+      }
+
+}
+/* Pour faires des séparation */
+
+section{
+  margin: 5% 0;
+}
+
+
+/* css pour le menue */
+
+.titre {
+    
+    color: black ;
+    text-align: center;
+
+}
+
+.titre h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    text-decoration: underline;
+    font-family: Times;
+
+}
+
+#Starters {}
+#Main-Courses {}
+#Soups{}
+#Desserts{}
+
+/* class pour l'alignement des images et du texte pour la présentation du menu */
+.menu-post-img img {
+    border-radius: 99em;
+    height: 65px;
+    width: 65px;
+}
+
+.menu-post-img {
+    display: block;
+    float: left;
+    position: relative;
+    top: -5px;
+}
+
+.menu-text {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.menu-post-desc {
+    margin-left: 70px;
+}
+
+/* permet de gérer la taille du texte des noms des plats */
+.plats {
+    font-size: 23px;
+}
+
+/* css footer */
+.titre h4 {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    text-decoration: underline;
+
+
+}
+
+p{
+  /*text-align: center;*/
+  font-size: 18px ;
+
+}
+#footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;    background-color: #CECECE;
+    text-align: center;
+    /* Set the fixed height of the footer here */
+    height: 30px;
+}
+
+#footer p {
+    padding: 0;
+    margin: 9px 0 0 0;
+    font-size: 12px;
+    color: black ;
+}
+
+#reservation{}
+
+li {
+  list-style: none;
+}
+
+.media-bar{
+  width: 3%;
+  
+}
+
+
+
+
+
+
