@@ -111,6 +111,9 @@ let Recherche_div = function (type) {
 };
 
 // retourne l'emplacement de l'image demandé
+/**
+ * @return {string}
+ */
 let Add_image = function (image) {
     switch (image) {
         case "Quesadillas":
@@ -130,10 +133,13 @@ let Add_image = function (image) {
         case "Brownies":
             return 'image/brownie.jpg';
         default:
-            return 0;
+            return 'image/pasdimage.jpg';
     }
 };
 
+/**
+ * @return {number}
+ */
 let Prix_total_plat = function (type, i){
     let prix_total;
     prix_total = Number(plats[type][i].prixPreparation);
@@ -142,4 +148,4 @@ let Prix_total_plat = function (type, i){
         prix_total += Number(ingredients[plats[type][i].ingredients[s]].prix);
     }
     return prix_total;
-}
+};
