@@ -4,10 +4,14 @@ let Event_click_new_plat = function () {
 };
 
 let Nouveau_plat = function () {
-    console.log("ca marche plat");
     let currentDiv = document.getElementById('new');
     let div = document.getElementById('div_globale');
-    console.log(currentDiv);
     currentDiv.removeChild(div);
-    console.log(currentDiv);
+    Affichage_formulaire_nouveau_plat();
+};
+
+let Affichage_formulaire_nouveau_plat = function () {
+    Debut_form();
+    Ajout_barre_nom("  Nom du plat :")
+
 };
