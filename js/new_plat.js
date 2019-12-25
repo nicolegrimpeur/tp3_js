@@ -12,6 +12,10 @@ let Nouveau_plat = function () {
 
 let Affichage_formulaire_nouveau_plat = function () {
     Debut_form();
-    Ajout_barre_nom("  Nom du plat :")
-
+    Ajout_barre_nom("  Nom du plat :", "Nom");
+    Ajout_texte("  Ingrédients : ");
+    for (let i = 0; i < 5; ++i) {
+        Ajout_multiple_box(String(i) + "    ", i);
+    }
+    Bouton_submit("Ajouter");
 };

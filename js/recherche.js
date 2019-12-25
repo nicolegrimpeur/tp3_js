@@ -12,6 +12,7 @@ let Nouvel_recherche = function () {
 
 let Affichage_recherche = function () {
     Debut_form();
-    Ajout_barre_nom("  Votre recherche :")
+    Ajout_barre_nom("  Votre recherche :", "Nom");
+    Bouton_submit("Rechercher");
 
 };
