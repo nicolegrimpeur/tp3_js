@@ -20,9 +20,11 @@
 <script src="js/plats.js"></script>
 <script src="js/ingredients.js"></script>
 <script src="js/menu.js"></script>
+<script src="js/fonctions_formulaire.js"></script>
 <script src="js/recherche.js"></script>
 <script src="js/new_plat.js"></script>
 <script src="js/new_ingredient.js"></script>
+<script src="js/add_ingredient.js"></script>
 <script src="js/main.js"></script>
 
 
@@ -84,16 +86,25 @@
 
 <br><br>
 
-<div class="btn-group btn-group-toggle btn-block" data-toggle="buttons" id="new">
-    <label class="btn btn-secondary active" id="recherche">
-        <input type="radio" name="options" autocomplete="off" checked> Recherche
-    </label>
-    <label class="btn btn-secondary" id="new_plat">
-        <input type="radio" name="options" autocomplete="off"> Ajouter un nouveau plat
-    </label>
-    <label class="btn btn-secondary" id="new_ingredient">
-        <input type="radio" name="options" autocomplete="off"> Ajouter un nouvel ingrédient
-    </label>
+<div id="new">
+    <div class="btn-group btn-group-toggle btn-block" data-toggle="buttons">
+        <label class="btn btn-secondary" id="recherche">
+            <input type="radio" name="options" autocomplete="off" checked> Recherche
+        </label>
+        <label class="btn btn-secondary" id="new_plat">
+            <input type="radio" name="options" autocomplete="off"> Ajouter un nouveau plat
+        </label>
+        <label class="btn btn-secondary" id="new_ingredient">
+            <input type="radio" name="options" autocomplete="off"> Ajouter un nouvel ingrédient
+        </label>
+        <label class="btn btn-secondary" id="add_ingredient">
+            <input type="radio" name="options" autocomplete="off"> Ajouter un ingrédient à un plat existant
+        </label>
+        <br>
+    </div>
+    <div id="div_globale">
+
+    </div>
 </div>
 
 <script>New()</script>
