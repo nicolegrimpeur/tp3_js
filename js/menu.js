@@ -1,4 +1,5 @@
- $(document).ready(function() {
+// partie qui gère la nav barre
+$(document).ready(function() {
             $(".menu-icon").on("click", function() {
                   $("nav ul").toggleClass("showing");
             });

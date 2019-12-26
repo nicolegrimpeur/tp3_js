@@ -1,3 +1,4 @@
+// permet de créer la div parent
 let Debut_form = function () {
     let currentDiv = document.getElementById('new');
 
@@ -6,6 +7,7 @@ let Debut_form = function () {
     div.setAttribute('id', 'div_globale');
 };
 
+// permet de rajouter un texte avec à côté une barre de texte que l'on peut entrer
 let Ajout_barre_nom = function (value_string, value_string_nom, name_string) {
     let div = document.getElementById('div_globale');
 
@@ -37,6 +39,7 @@ let Ajout_barre_nom = function (value_string, value_string_nom, name_string) {
     input2.setAttribute('placeholder', value_string_nom);
 };
 
+// permet de créer un menu déroulant avec les éléments présents dans le tableau value_array (le premier élément étant le nom affiché par défaut
 let Ajout_menu_deroulant = function (value_array, name_string) {
     let div = document.getElementById('div_globale');
 
@@ -62,6 +65,7 @@ let Ajout_menu_deroulant = function (value_array, name_string) {
     }
 };
 
+// permet d'ajouter du texte au formulaire
 let Ajout_texte = function (value_string, id_string) {
     let div = document.getElementById('div_globale');
 
@@ -74,6 +78,7 @@ let Ajout_texte = function (value_string, id_string) {
     input.setAttribute('value', value_string);
 };
 
+// permet de créer une box d'id "inlineCheckbox"+String(compteur_int) pour récupérer ses données par la suite avec le nom value_string
 let Ajout_multiple_box = function (value_string, compteur_int) {
     if (value_string != "") {
         let div = document.getElementById('div_globale');
@@ -99,11 +104,16 @@ let Ajout_multiple_box = function (value_string, compteur_int) {
     }
 };
 
+// permet de créer un bouton avec le texte value_string
 let Bouton_submit = function (value_string) {
     let div = document.getElementById('div_globale');
 
+    // permet de centrer le bouton
+    let center = document.createElement("center");
+    div.appendChild(center);
+
     let button = document.createElement("button");
-    div.appendChild(button);
+    center.appendChild(button);
     button.setAttribute('type', 'submit');
     button.setAttribute('class', 'btn btn-primary');
     button.setAttribute('id', 'submit');
