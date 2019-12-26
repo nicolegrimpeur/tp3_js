@@ -4,12 +4,13 @@ html {
 }
 
 
-header {
-      width: 100%;
-      height: 100vh;
-      background: url(https://cdn-s-www.ledauphine.com/images/A836824B-CB88-4A6E-A323-18ADF8F02F3B/NW_raw/les-cuisiniers-se-lancent-dans-des-declinaisons-haut-de-gamme-du-burger-traditionnel-photo-d-illustration-pixabay-domaine-public-1521554712.jpg) no-repeat 50% 50%;
-      background-size: 2000px ;
+.masthead {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(https://cdn.pixabay.com/photo/2015/04/20/13/30/kitchen-731351_1280.jpg);
+  background-size: 1700px ;
 }
+
 body {
     color: black;/* couleur de la page principal */
     /* Margin bottom by footer height*/
