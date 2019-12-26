@@ -1,16 +1,21 @@
+// listener pour savoir lorsque l'on clique sur la barre rechercher
 let Event_click_add_ingredient = function () {
     let click_ajout_plat = document.getElementById('add_ingredient');
     click_ajout_plat.addEventListener('click', Ajouter_ingredient);
 };
 
 let Ajouter_ingredient = function () {
+    // supprime la partie sous la barre
     let currentDiv = document.getElementById('new');
     let div = document.getElementById('div_globale');
     currentDiv.removeChild(div);
+    // affiche le formulaire sous la barre
     Affichage_formulaire_ajouter_ingredient();
 };
 
+// affiche le formulaire
 let Affichage_formulaire_ajouter_ingredient = function () {
+    // affiche le formulaire
     Debut_form();
 
     let liste_plat = ["Nom du plat"];
@@ -26,13 +31,14 @@ let Affichage_formulaire_ajouter_ingredient = function () {
         Ajout_multiple_box(ingredients[i].name, i);
     }
 
+    // listener pour savoir lorsque l'on modifie le nom du plat
     let click_nom_plat = document.forms['nom_plat'];
     click_nom_plat.addEventListener('click', Modification_list_ingredients);
 
     Ajout_texte("", "vide");
     Bouton_submit("Modifier");
 
-    // ajout d'un listener sur le bouton submit
+    // ajout d'un listener sur le bouton modifier
     let click_modifier = document.getElementById('submit');
     click_modifier.addEventListener('click', Clic_modifier_ingredient);
 };

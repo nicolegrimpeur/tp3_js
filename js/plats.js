@@ -182,14 +182,14 @@ let Add_titre = function (type) { // type : 0 pour entré, 1 pour plat, 2 pour d
     div_titre.appendChild(h2);
 
     if (type == 0) {
-        h2.appendChild(document.createTextNode("Starters"));
+        h2.appendChild(document.createTextNode("Entrées"));
     }
     else if (type == 2) {
         h2.appendChild(document.createTextNode("Desserts"));
     }
     else
     {
-        h2.appendChild(document.createTextNode("Main Courses"));
+        h2.appendChild(document.createTextNode("Plats"));
     }
 
     div_titre.appendChild(document.createElement('br'));
