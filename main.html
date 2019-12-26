@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
     <link rel="stylesheet" type="text/css" href="./css/menu.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <title>Le restaurant</title>
+    <title>Le Restaurant</title>
 </head>
 <body>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -27,7 +27,7 @@
 <script src="js/add_ingredient.js"></script>
 <script src="js/main.js"></script>
 
-
+<!-- Barre de navisation avec hyperliens  -->
 <div class="row">
     <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div>
@@ -41,9 +41,9 @@
                 <div class="menu">
                     <ul>
                         <li><a href="#">Accueil</a></li>
-                        <li><a href="#Starters">Menu</a> </li>
+                        <li><a href="#Starters">La Carte</a> </li>
                         <li><a href="#reservation">Réservation</a></li>
-                        <li><a href="#footer">A propos</a></li>
+                        <li><a href="#footer">À Propos</a></li>
                     </ul>
 
                 </div>
@@ -56,7 +56,7 @@
 </div>
 <div>
 
-  <!-- Header -->
+  <!-- Fond d'écran de l'accueil -->
   <header class="masthead">
   </header>
 
@@ -64,7 +64,7 @@
 </div>
 
 <section></section>
-
+<!-- Affichage de la carte -->
 <div class="container" id="tableau_menu">
 
 </div>
@@ -72,12 +72,14 @@
 <script>Add(plats, "tableau_menu", "contient_tab");</script>
 
 <br><br>
-
 <div id="new">
+<!-- Affiche seulement se qui contient la recherche sous la forme d'un tableau -->
     <div class="btn-group btn-group-toggle btn-block" data-toggle="buttons">
         <label class="btn btn-secondary" id="recherche">
             <input type="radio" name="options" autocomplete="off" checked> Recherche
         </label>
+
+<!-- Pour ajout dans le tableau déja existent d'un ingrédient ou d'un plat  -->
         <label class="btn btn-secondary" id="new_plat">
             <input type="radio" name="options" autocomplete="off"> Ajouter un nouveau plat
         </label>
@@ -99,6 +101,7 @@
 </body>
 <footer>
 <section></section>
+<!-- tableau des informations du restaurant ,lien avec la navbar réservation -->  
     <div class="container-fluid">
      <div class="container">
         <div class="row" style="text-align: center">
@@ -113,7 +116,7 @@
          </article>
            <article class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
              <div class="titre" id="reservation">
-             <h4>RESERVATION :</h4>
+             <h4>RÉSERVATION :</h4>
              </div>
              <p>03.20.30.40.50
                 <br>
@@ -126,7 +129,7 @@
                </div>
                <p> Lundi - Vendredi : 11H - 23H
                  <br>
-                   Samedi - Dimanche: 10H - 01H
+                   Samedi - Dimanche: 10H - 13H
                </p>
              </article>
         </div>
@@ -135,6 +138,7 @@
     </div>
 <div >
 <ul> 
+<!-- barre des réseaux sociaux avec lien direct -->
   <center>
     <li >
     <a href="https://www.facebook.com">
