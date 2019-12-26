@@ -35,6 +35,7 @@ let Affichage_formulaire_ajouter_ingredient = function () {
     let click_nom_plat = document.forms['nom_plat'];
     click_nom_plat.addEventListener('click', Modification_list_ingredients);
 
+    // permet d'éviter que le bouton soit à côté des ingrédients mais en dessous
     Ajout_texte("", "vide");
     Bouton_submit("Modifier");
 
@@ -43,11 +44,14 @@ let Affichage_formulaire_ajouter_ingredient = function () {
     click_modifier.addEventListener('click', Clic_modifier_ingredient);
 };
 
+// fonction qui coche ou décoche les ingrédients en fonction du plat sélectionné
 let Modification_list_ingredients = function () {
+    // vérifie qu'un nom a été rentré pour le plat
     if (document.forms["nom_plat"].elements[0].value != "Nom du plat") {
         let id;
         let compteur = 0;
         let list_ingredient;
+        // ajoute à liste_ingredient la liste des ingrédients du plat demandé
         for (let i = 0; i < plats.length; ++i) {
             for (let j = 0; j < plats[i].length; ++j, ++compteur) {
                 if (compteur == document.forms["nom_plat"].elements[0].value) {
@@ -55,6 +59,7 @@ let Modification_list_ingredients = function () {
                 }
             }
         }
+        // coche ou decoche la case en fonction de si l'ingrédient est utilisé dans le plat ou non
         for (let i = 0; i < ingredients.length; ++i) {
             id = document.getElementById("inlineCheckbox"+String(i));
             id.checked = null;
@@ -68,6 +73,7 @@ let Modification_list_ingredients = function () {
             }
         }
     }
+    // si aucun plat n'a été demandé toutes les cases sont décochés
     else {
         let id;
         for (let i = 0; i < ingredients.length; ++i) {
@@ -78,9 +84,11 @@ let Modification_list_ingredients = function () {
 };
 
 let Clic_modifier_ingredient = function () {
+    // vérifie qu'un nom a été rentré pour le plat
     if (document.forms["nom_plat"].elements[0].value != "Nom du plat") {
         let id;
         let tab_ingredients = [];
+        // ajoute à tab_ingrédients la liste des ingrédients
         for (let i = 0; i < ingredients.length; ++i) {
             id = document.getElementById("inlineCheckbox"+String(i));
             if (id.checked == true) {
@@ -89,10 +97,14 @@ let Clic_modifier_ingredient = function () {
         }
 
         let compteur = 0;
+        // modifie la liste des ingrédients du plat
         for (let i = 0; i < plats.length; ++i) {
             for (let j = 0; j < plats[i].length; ++j, ++compteur) {
+                // teste si le compteur est égal à l'indice du plat demandé
                 if (compteur == document.forms["nom_plat"].elements[0].value) {
                     plats[i][j].ingredients = tab_ingredients;
+
+                    // ajout du texte pour dire que l'ingrédient a bien été rajouté (et suppression de l'ancien texte s'il existait déjà
                     if (document.getElementById("plat_modifie") != null) {
                         let a_suppr = document.getElementById("plat_modifie");
                         a_suppr.remove();
@@ -109,11 +121,13 @@ let Clic_modifier_ingredient = function () {
             id.checked = false;
         }
 
+        // suppression du message d'erreur s'il existe
         if (document.getElementById("erreur_modif_ingredient") != null) {
             let erreur = document.getElementById("erreur_modif_ingredient");
             erreur.remove();
         }
     }
+    // sinon affichage d'un message demandant de remplir toutes les cases
     else
     {
         if (document.getElementById("erreur_modif_ingredient") == null) {
@@ -125,5 +139,6 @@ let Clic_modifier_ingredient = function () {
         }
     }
 
+    // fonction pour supprimer et rafficher le tableau avec le nouveau plat
     Raffraichir_menu();
 };
