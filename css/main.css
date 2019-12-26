@@ -66,6 +66,7 @@ nav.black ul {
       background: black;
 }
 
+/*barre de navigation : passage devant les autres éléments*/
 nav.black {
     z-index :10;
 }
