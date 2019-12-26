@@ -19,14 +19,14 @@ let plats = [
 ];
 
 // lance la fonction pour chaque sous partie du menu
-let Add_type = function(type) {
-    for (let i = 0; i < plats[1].length; i += 2){
-        Add_deux_plats(type, i);
+let Add_type = function(type, array) {
+    for (let i = 0; i < array[type].length; i += 2){
+        Add_deux_plats(type, i, array);
     }
 };
 
 // permet d'afficher les plats pour une sous partie du menu
-let Add_deux_plats = function (type, numero) {
+let Add_deux_plats = function (type, numero, array) {
     // déclaration des variables pour chaque sous division
     let currentDiv, div, article, h5, textname, p, textingredient, prix_total, myImg, div2, list_ingredients, a;
 
@@ -38,7 +38,7 @@ let Add_deux_plats = function (type, numero) {
     div.setAttribute('class', 'row');
 
     // permet de former deux colonnes
-    for (let i = numero; i < numero + 2 && i < plats[type].length; ++i){
+    for (let i = numero; i < numero + 2 && i < array[type].length; ++i){
         article = document.createElement('article');
         div.appendChild(article);
         article.setAttribute('class', 'col-xs-12 col-sm-6 col-md-6 col-lg-6');
@@ -50,15 +50,15 @@ let Add_deux_plats = function (type, numero) {
         // affichage de l'image
         a = document.createElement('a');
         div2.appendChild(a);
-        a.setAttribute('href', String(Add_image(plats[type][i].name)));
-        a.setAttribute('title', String(Add_image(plats[type][i].name)));
+        a.setAttribute('href', String(Add_image(array[type][i].name)));
+        a.setAttribute('title', String(Add_image(array[type][i].name)));
 
         myImg = new Image();
         myImg.src = Add_image(type);
         a.appendChild(myImg);
         myImg.setAttribute('width', '400');
         myImg.setAttribute('height', '400');
-        myImg.setAttribute('src', String(Add_image(plats[type][i].name)));
+        myImg.setAttribute('src', String(Add_image(array[type][i].name)));
         myImg.setAttribute('alt', 'Image');
 
 
@@ -71,9 +71,9 @@ let Add_deux_plats = function (type, numero) {
         h5.setAttribute('class', 'plats');
 
         // calcul le prix total du produit
-        prix_total = Prix_total_plat(type, i);
+        prix_total = Prix_total_plat(type, i, array);
 
-        textname = document.createTextNode(plats[type][i].name + " : " + prix_total + "€");
+        textname = document.createTextNode(array[type][i].name + " : " + prix_total + "€");
         h5.appendChild(textname);
 
         p = document.createElement('p');
@@ -82,12 +82,12 @@ let Add_deux_plats = function (type, numero) {
 
         // liste tous les ingrédients utiles au plat
         list_ingredients = '';
-        for (let j = 0; j < plats[type][i].ingredients.length; ++j){
-            if (j < plats[type][i].ingredients.length - 1){
-                list_ingredients += ingredients[plats[type][i].ingredients[j]].name + ' / ';
+        for (let j = 0; j < array[type][i].ingredients.length; ++j){
+            if (j < array[type][i].ingredients.length - 1){
+                list_ingredients += ingredients[array[type][i].ingredients[j]].name + ' / ';
             }
             else{
-                list_ingredients += ingredients[plats[type][i].ingredients[j]].name;
+                list_ingredients += ingredients[array[type][i].ingredients[j]].name;
             }
         }
         textingredient = document.createTextNode(list_ingredients);
@@ -140,12 +140,64 @@ let Add_image = function (image) {
 /**
  * @return {number}
  */
-let Prix_total_plat = function (type, i){
+let Prix_total_plat = function (type, i, array){
     let prix_total;
-    prix_total = Number(plats[type][i].prixPreparation);
+    prix_total = Number(array[type][i].prixPreparation);
 
-    for (let s = 0; s < plats[type][i].ingredients.length; ++s){
-        prix_total += Number(ingredients[plats[type][i].ingredients[s]].prix);
+    for (let s = 0; s < array[type][i].ingredients.length; ++s){
+        prix_total += Number(ingredients[array[type][i].ingredients[s]].prix);
     }
     return prix_total;
+};
+
+let Debut_tableau = function (id_debut) {
+    let currentDiv= document.getElementById(id_debut);
+
+    let div = document.createElement("div");
+    currentDiv.appendChild(div);
+    div.setAttribute("id", "contient_tab");
+};
+
+let Add_titre = function (type) { // type : 0 pour entré, 1 pour plat, 2 pour dessert
+    let currentDiv= document.getElementById("contient_tab");
+
+    let div = document.createElement("div");
+    currentDiv.appendChild(div);
+    if (type == 0) {
+        div.setAttribute("id", "Starters");
+    }
+    else if (type == 2) {
+        div.setAttribute("id", "Desserts");
+    }
+    else
+    {
+        div.setAttribute("id", "Main-Courses");
+    }
+
+    let div_titre = document.createElement("div");
+    div.appendChild(div_titre);
+    div_titre.setAttribute("class", "titre");
+
+    let h2 = document.createElement("h2");
+    div_titre.appendChild(h2);
+
+    if (type == 0) {
+        h2.appendChild(document.createTextNode("Starters"));
+    }
+    else if (type == 2) {
+        h2.appendChild(document.createTextNode("Desserts"));
+    }
+    else
+    {
+        h2.appendChild(document.createTextNode("Main Courses"));
+    }
+
+    div_titre.appendChild(document.createElement('br'));
+    div_titre.appendChild(document.createElement('br'));
+};
+
+let Raffraichir_menu = function () {
+    let currentDiv = document.getElementById("contient_tab");
+    currentDiv.remove();
+    Add(plats);
 };

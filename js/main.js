@@ -1,6 +1,8 @@
-let Add = function () {
-    for (let i = 0; i < plats.length; ++i) {
-        Add_type(i);
+let Add = function (array, id_debut) {
+    Debut_tableau(id_debut);
+    for (let i = 0; i < array.length; ++i) {
+        Add_titre(i);
+        Add_type(i, array);
     }
 };
 

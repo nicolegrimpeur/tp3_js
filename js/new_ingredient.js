@@ -52,4 +52,6 @@ let Clic_submit_ingredient = function () {
             Ajout_texte("Merci de rentrer un nom, de choisir si le produit est local ou pas, ainsi que de donner le prix de l'ingrédient", "erreur_ajout_ingredient");
         }
     }
+
+    Raffraichir_menu();
 };
