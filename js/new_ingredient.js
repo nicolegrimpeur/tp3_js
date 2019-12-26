@@ -1,21 +1,16 @@
-// listener pour savoir lorsque l'on clique sur la barre nouvel ingrédient
 let Event_click_new_ingredient = function () {
     let click_ajout_plat = document.getElementById('new_ingredient');
     click_ajout_plat.addEventListener('click', Nouvel_ingredient);
 };
 
 let Nouvel_ingredient = function () {
-    // supprime la partie sous la barre
     let currentDiv = document.getElementById('new');
     let div = document.getElementById('div_globale');
     currentDiv.removeChild(div);
-    // affiche le formulaire sous la barre
     Affichage_formulaire_nouveau_ingredient();
 };
 
-// affiche le formulaire
 let Affichage_formulaire_nouveau_ingredient = function () {
-    // affiche le formulaire
     Debut_form();
     Ajout_barre_nom("  Nom de l'ingrédient :", "Nom", "nom");
     // 0 le produit n'est pas local, 1 le produit l'est
@@ -57,6 +52,4 @@ let Clic_submit_ingredient = function () {
             Ajout_texte("Merci de rentrer un nom, de choisir si le produit est local ou pas, ainsi que de donner le prix de l'ingrédient", "erreur_ajout_ingredient");
         }
     }
-
-    Raffraichir_menu();
 };

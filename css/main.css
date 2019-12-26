@@ -4,27 +4,15 @@ html {
 }
 
 
-.masthead {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(https://cdn.pixabay.com/photo/2015/04/20/13/30/kitchen-731351_1280.jpg);
-  background-size: 1700px ;
-}
 
 body {
     color: black;/* couleur de la page principal */
     /* Margin bottom by footer height*/
     margin: 0 0 40px 0;
 }
- /* css du haut */*
 
-.content {
-      width: 94%;
-      margin: 4em auto;
-      font-size: 20px;
-      line-height: 30px;
-      text-align: justify;
-}
+
+ /* css de l'acueil */
 
 @media (any-hover: hover) {
   a:hover {
@@ -128,14 +116,22 @@ nav ul li a {
       }
 
 }
-/* Pour faires des séparation */
+
+ /* classe pour le fond d'écran de l'accueil principal  */
+.masthead {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url(https://cdn.pixabay.com/photo/2015/04/20/13/30/kitchen-731351_1280.jpg);
+  background-size: 1700px ;
+}
+/* Pour faires des séparations */
 
 section{
   margin: 5% 0;
 }
 
 
-/* css pour le menue */
+/* css pour du menue */
 
 .titre {
     
@@ -152,13 +148,16 @@ section{
     font-family: Times;
 
 }
-
+/* id pour affichage du tableau et l'utilisation de l'hyperlien la Carte  */
 #Starters {}
 #Main-Courses {}
 #Soups{}
 #Desserts{}
+/* id pour l'hyperlien réservation  */
+#reservation{}
 
-/* class pour l'alignement des images et du texte pour la présentation du menu */
+
+/* class pour l'alignement des images et du texte pour la présentation de la carte  */
 .menu-post-img img {
     border-radius: 99em;
     height: 65px;
@@ -186,7 +185,7 @@ section{
     font-size: 23px;
 }
 
-/* css footer */
+/* css du footer */
 .titre h4 {
     padding: 0;
     margin: 0;
@@ -196,11 +195,7 @@ section{
 
 }
 
-p{
-  /*text-align: center;*/
-  font-size: 18px ;
 
-}
 #footer{
     position: absolute;
     bottom: 0;
@@ -210,6 +205,12 @@ p{
     height: 30px;
 }
 
+p{
+  /*text-align: center*/
+  font-size: 18px ;
+
+}
+
 #footer p {
     padding: 0;
     margin: 9px 0 0 0;
@@ -217,16 +218,17 @@ p{
     color: black ;
 }
 
-#reservation{}
 
+/* permet d'enlever les points d'un liste  */
 li {
   list-style: none;
 }
-
+/* pour gérer la barre des réseaux sociaux */
 .media-bar{
   width: 3%;
   
 }
+
 
 
 
