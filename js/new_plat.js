@@ -72,4 +72,6 @@ let Clic_ajouter_plat = function () {
             Ajout_texte("Merci de remplir chaque case", "erreur_ajout_ingredient");
         }
     }
+
+    Raffraichir_menu();
 };
