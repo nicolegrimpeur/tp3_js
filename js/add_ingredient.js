@@ -118,4 +118,6 @@ let Clic_modifier_ingredient = function () {
             Ajout_texte("Merci de choisir un plat à modifier", "erreur_modif_ingredient");
         }
     }
+
+    Raffraichir_menu();
 };

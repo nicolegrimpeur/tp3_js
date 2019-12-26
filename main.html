@@ -40,28 +40,27 @@
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="file:///Users/florencedubois/floobits/nicolegrimpeur/tp2_dubois_barrat/main.html#">Home</a></li>
-
-                       <li class="nav-item dropdown">
-                         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menus</a>
-                           <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                              <a class="dropdown-item" href="#Starters">Startters</a>
-                              <a class="dropdown-item" href="#Main-Courses">Main Courses</a>
-                              <a class="dropdown-item" href="#Desserts">Dersserts</a>
-                           </div>
-                        </li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#Starters">Menu</a> </li>
+<!--                       <li class="nav-item dropdown">-->
+<!--&lt;!&ndash;                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Menus</a>&ndash;&gt;-->
+<!--                           <button class="nav-link btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                               Menu-->
+<!--                               <i class="fa fa-caret-down"></i>-->
+<!--                           </button>-->
+<!--                           <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuButton">-->
+<!--                              <a class="dropdown-item" href="#Starters">Starters</a>-->
+<!--                              <a class="dropdown-item" href="#Main-Courses">Main Courses</a>-->
+<!--                              <a class="dropdown-item" href="#Desserts">Desserts</a>-->
+<!--                           </div>-->
+<!--                        </li>-->
                         <li><a href="#reservation">Réservation</a></li>
                         <li><a href="#footer">About</a></li>
-                        <li><form class="form-inline">
-                          <div class="md-form my-0">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                          </div>
-                            </form>
-                        </li>
-    
                     </ul>
 
                 </div>
+
+
             </nav>
         </div>
 
@@ -78,30 +77,11 @@
 
 <section></section>
 
-<div class="container">
-    <div id="Starters">
-        <div class="titre">
-            <h2>Starters</h2>
-             <br></br>
-        </div>
-    </div>
+<div class="container" id="tableau_menu">
 
-    <div id="Main-Courses">
-        <div class="titre">
-            <h2>Main Courses</h2>
-             <br></br>
-        </div>
-    </div>
-
-    <div id="Desserts">
-        <div class="titre">
-            <h2>Desserts</h2>
-             <br></br>
-        </div>
-    </div>
 </div>
 
-<script>Add();</script>
+<script>Add(plats, "tableau_menu", "contient_tab");</script>
 
 <br><br>
 
@@ -188,7 +168,7 @@
     
 
     <div id="footer">
-        <p>&copy; DUBOIS Florence et son équipier BARRAT Nicolas en CIR 2 pour l'édition décemnbre 2019</p>
+    <p>&copy; Cheffe DUBOIS Florence et son commis BARRAT Nicolas en CIR 2 pour l'édition décembre 2019</p>
     </div>
 </footer>
 </html>

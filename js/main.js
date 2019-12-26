@@ -1,6 +1,10 @@
-let Add = function () {
-    for (let i = 0; i < plats.length; ++i) {
-        Add_type(i);
+let Add = function (array, id_debut, id_tab) {
+    Debut_tableau(id_debut, id_tab);
+    for (let i = 0; i < array.length; ++i) {
+        if (array[i].length != 0) {
+            Add_titre(i);
+            Add_type(i, array);
+        }
     }
 };
 

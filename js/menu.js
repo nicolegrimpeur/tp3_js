@@ -14,4 +14,4 @@
             else {
                   $('nav').removeClass('black');
             }
-      })
+      });
