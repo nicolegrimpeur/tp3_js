@@ -150,12 +150,12 @@ let Prix_total_plat = function (type, i, array){
     return prix_total;
 };
 
-let Debut_tableau = function (id_debut) {
+let Debut_tableau = function (id_debut, id_tab) {
     let currentDiv= document.getElementById(id_debut);
 
     let div = document.createElement("div");
     currentDiv.appendChild(div);
-    div.setAttribute("id", "contient_tab");
+    div.setAttribute("id", id_tab);
 };
 
 let Add_titre = function (type) { // type : 0 pour entré, 1 pour plat, 2 pour dessert
@@ -199,5 +199,5 @@ let Add_titre = function (type) { // type : 0 pour entré, 1 pour plat, 2 pour d
 let Raffraichir_menu = function () {
     let currentDiv = document.getElementById("contient_tab");
     currentDiv.remove();
-    Add(plats);
+    Add(plats, "tableau_menu", "contient_tab");
 };
