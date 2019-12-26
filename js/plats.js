@@ -1,3 +1,4 @@
+// liste des plats, divisé en 3 pour les trois types de plat (entré, plat, et desssert)
 let plats = [
     // starters
     [
@@ -30,7 +31,7 @@ let Add_deux_plats = function (type, numero, array) {
     // déclaration des variables pour chaque sous division
     let currentDiv, div, article, h5, textname, p, textingredient, prix_total, myImg, div2, list_ingredients, a;
 
-    // add the newly created element and its content into the DOM
+    // recupère la division à laquelle sera ajouté tous les enfants
     currentDiv = Recherche_div(type);
 
     div = document.createElement('div');
@@ -110,10 +111,11 @@ let Recherche_div = function (type) {
     }
 };
 
-// retourne l'emplacement de l'image demandé
+// modifie la valeur de return de la fonction en nombre
 /**
  * @return {string}
  */
+// retourne l'emplacement de l'image demandé
 let Add_image = function (image) {
     switch (image) {
         case "Quesadillas":
@@ -137,9 +139,11 @@ let Add_image = function (image) {
     }
 };
 
+// modifie la valeur de return de la fonction en nombre
 /**
  * @return {number}
  */
+// calcul le prix total d'un plat
 let Prix_total_plat = function (type, i, array){
     let prix_total;
     prix_total = Number(array[type][i].prixPreparation);
@@ -150,6 +154,7 @@ let Prix_total_plat = function (type, i, array){
     return prix_total;
 };
 
+// crée la div parent dans laquelle sera ajouté le tableau
 let Debut_tableau = function (id_debut, id_tab) {
     let currentDiv= document.getElementById(id_debut);
 
@@ -158,6 +163,7 @@ let Debut_tableau = function (id_debut, id_tab) {
     div.setAttribute("id", id_tab);
 };
 
+// crée le titre en fonction du type
 let Add_titre = function (type) { // type : 0 pour entré, 1 pour plat, 2 pour dessert
     let currentDiv= document.getElementById("contient_tab");
 
@@ -192,10 +198,12 @@ let Add_titre = function (type) { // type : 0 pour entré, 1 pour plat, 2 pour d
         h2.appendChild(document.createTextNode("Plats"));
     }
 
+    // rajout de saut de lignes
     div_titre.appendChild(document.createElement('br'));
     div_titre.appendChild(document.createElement('br'));
 };
 
+// permet de supprimer puis de rafficher le tableau afin de l'actualiser avec les nouveaux éléments
 let Raffraichir_menu = function () {
     let currentDiv = document.getElementById("contient_tab");
     currentDiv.remove();

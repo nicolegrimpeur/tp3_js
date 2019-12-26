@@ -1,3 +1,4 @@
+// liste des ingrédients
 let ingredients = [
     { idIng: '0', name: 'Pattes', local: '0', prix: '0.50' },
     { idIng: '1', name: 'Tomate', local: '1', prix: '1.50' },
