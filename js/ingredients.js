@@ -1,6 +1,6 @@
 let ingredients = [
     { idIng: '0', name: 'Pattes', local: '0', prix: '0.50' },
-    { idIng: '1', name: 'Tomage', local: '1', prix: '1.50' },
+    { idIng: '1', name: 'Tomate', local: '1', prix: '1.50' },
     { idIng: '2', name: 'Boeuf', local: '1', prix: '4' },
     { idIng: '3', name: 'Lardons', local: '1', prix: '2.50' },
     { idIng: '4', name: 'Crême', local: '0', prix: '1' },
@@ -21,5 +21,5 @@ let ingredients = [
     { idIng: '19', name: 'Pain', local: '1', prix: '0.80' },
     { idIng: '20', name: 'Beurre', local: '1', prix: '1' },
     { idIng: '21', name: 'Yahourt', local: '0', prix: '0.50' },
-    { idIng: '22', name: 'Oignons', local: '1', prix: '0.50' },
+    { idIng: '22', name: 'Oignons', local: '1', prix: '0.50' }
 ];
