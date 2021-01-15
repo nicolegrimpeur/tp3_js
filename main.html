@@ -6,17 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./css/main.css" />
-    <link rel="stylesheet" type="text/css" href="./css/menu.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/menu.css"/>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <title>Le Restaurant</title>
 </head>
 <body>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 <script src="js/plats.js"></script>
 <script src="js/ingredients.js"></script>
 <script src="js/menu.js"></script>
@@ -41,7 +48,7 @@
                 <div class="menu">
                     <ul>
                         <li><a href="#">Accueil</a></li>
-                        <li><a href="#Starters">La Carte</a> </li>
+                        <li><a href="#Starters">La Carte</a></li>
                         <li><a href="#reservation">Réservation</a></li>
                         <li><a href="#footer">À Propos</a></li>
                     </ul>
@@ -56,9 +63,9 @@
 </div>
 <div>
 
-  <!-- Fond d'écran de l'accueil -->
-  <header class="masthead">
-  </header>
+    <!-- Fond d'écran de l'accueil -->
+    <header class="masthead">
+    </header>
 
 
 </div>
@@ -73,13 +80,13 @@
 
 <br><br>
 <div id="new">
-<!-- Affiche seulement se qui contient la recherche sous la forme d'un tableau -->
+    <!-- Affiche seulement se qui contient la recherche sous la forme d'un tableau -->
     <div class="btn-group btn-group-toggle btn-block" data-toggle="buttons">
         <label class="btn btn-secondary" id="recherche">
             <input type="radio" name="options" autocomplete="off" checked> Recherche
         </label>
 
-<!-- Pour ajout dans le tableau déja existent d'un ingrédient ou d'un plat  -->
+        <!-- Pour ajout dans le tableau déja existent d'un ingrédient ou d'un plat  -->
         <label class="btn btn-secondary" id="new_plat">
             <input type="radio" name="options" autocomplete="off"> Ajouter un nouveau plat
         </label>
@@ -100,67 +107,67 @@
 
 </body>
 <footer>
-<section></section>
-<!-- tableau des informations du restaurant ,lien avec la navbar réservation -->  
+    <section></section>
+    <!-- tableau des informations du restaurant ,lien avec la navbar réservation -->
     <div class="container-fluid">
-     <div class="container">
-        <div class="row" style="text-align: center">
-         <article class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-             <div class="titre">
-             <h4>ADRESSE :</h4>
-             </div>
-             <p> Le Restaurant
-              <br>
-                 41 Boulevard Vauban, 59800 Lille
-             </p>
-         </article>
-           <article class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-             <div class="titre" id="reservation">
-             <h4>RÉSERVATION :</h4>
-             </div>
-             <p>03.20.30.40.50
-                <br>
-                lerestaurant@gmail.com
-             </p>
-           </article>
-             <article class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-               <div class="titre">
-               <h4>HORAIRES :</h4>
-               </div>
-               <p> Lundi - Vendredi : 11H - 23H
-                 <br>
-                   Samedi - Dimanche: 10H - 13H
-               </p>
-             </article>
-        </div>
+        <div class="container">
+            <div class="row" style="text-align: center">
+                <article class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="titre">
+                        <h4>ADRESSE :</h4>
+                    </div>
+                    <p> Le Restaurant
+                        <br>
+                        41 Boulevard Vauban, 59800 Lille
+                    </p>
+                </article>
+                <article class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="titre" id="reservation">
+                        <h4>RÉSERVATION :</h4>
+                    </div>
+                    <p>03.20.30.40.50
+                        <br>
+                        lerestaurant@gmail.com
+                    </p>
+                </article>
+                <article class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="titre">
+                        <h4>HORAIRES :</h4>
+                    </div>
+                    <p> Lundi - Vendredi : 11H - 23H
+                        <br>
+                        Samedi - Dimanche: 10H - 13H
+                    </p>
+                </article>
+            </div>
 
-     </div>
+        </div>
     </div>
-<div >
-<ul> 
-<!-- barre des réseaux sociaux avec lien direct -->
-  <center>
-    <li >
-    <a href="https://www.facebook.com">
-      <img class="media-bar" src="image/facebook.png" >
-    </a>
-     <a href="https://www.instagram.com">
-      <img class="media-bar" src="image/instagram.png" >
-    </a>
-     <a href="https://www.tripadvisor.fr/">
-      <img class="media-bar" src="image/trip.png" >
-      </a>
-       <a href="https://twitter.com/">
-        <img class="media-bar" src="image/twitter.png" >
-       </a>
-  </li>
-  </center>
-</ul>
-</div>
-    
+    <div>
+        <ul>
+            <!-- barre des réseaux sociaux avec lien direct -->
+            <center>
+                <li>
+                    <a href="https://www.facebook.com">
+                        <img class="media-bar" src="image/facebook.png">
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <img class="media-bar" src="image/instagram.png">
+                    </a>
+                    <a href="https://www.tripadvisor.fr/">
+                        <img class="media-bar" src="image/trip.png">
+                    </a>
+                    <a href="https://twitter.com/">
+                        <img class="media-bar" src="image/twitter.png">
+                    </a>
+                </li>
+            </center>
+        </ul>
+    </div>
+
 
     <div id="footer">
-    <p>&copy; Cheffe DUBOIS Florence et son commis BARRAT Nicolas en CIR 2 pour l'édition décembre 2019</p>
+        <p>&copy; Cheffe DUBOIS Florence et son commis BARRAT Nicolas en CIR 2 pour l'édition décembre 2019</p>
     </div>
 </footer>
 </html>
